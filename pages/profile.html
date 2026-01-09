@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <link rel="stylesheet" href="./../css/profile.css">
+</head>
+<body>
+
+<div class="profile-card">
+  <div class="cover"></div>
+
+  <img id="profileImage" class="avatar" alt="Profile Image">
+
+  <h2 id="fullName"></h2>
+  <p id="emailText"></p>
+  <p id="cityText"></p>
+
+  <div class="details">
+    <p><b>Education:</b> <span id="educationText"></span></p>
+    <p><b>Experience:</b> <span id="experienceText"></span></p>
+    <p><b>Skills:</b> <span id="skillsText"></span></p>
+    <p><b>Contact:</b> <span id="contactText"></span></p>
+    <p><b>DOB:</b> <span id="dobText"></span></p>
+  </div>
+
+  <button onclick="editProfile()">Edit Profile</button>
+</div>
+
+<script>
+const data = JSON.parse(localStorage.getItem("profileData"));
+
+if (data) {
+  document.getElementById("fullName").innerText =
+    data.firstName + " " + data.lastName;
+
+  document.getElementById("emailText").innerText = data.email;
+  document.getElementById("cityText").innerText = data.city;
+  document.getElementById("educationText").innerText = data.education;
+  document.getElementById("experienceText").innerText = data.experience;
+  document.getElementById("contactText").innerText = data.contact;
+  document.getElementById("skillsText").innerText = data.skills;
+
+  
+  if (data.dob) {
+    const parts = data.dob.split("-");
+    document.getElementById("dobText").innerText =
+      parts[2] + "-" + parts[1] + "-" + parts[0];
+  }
+
+  
+  document.getElementById("profileImage").src = data.image;
+}
+
+function editProfile() {
+  window.location.href = "form.html";
+}
+</script>
+
+</body>
+</html>

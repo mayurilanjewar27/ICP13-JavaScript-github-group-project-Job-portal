@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Info Form</title>
+  <link rel="stylesheet" href="./../css/profile.css">
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Profile Info Form</h2>
+
+  <form id="profileForm">
+    <label>First Name</label>
+    <input type="text" id="firstName" required>
+
+    <label>Last Name</label>
+    <input type="text" id="lastName" required>
+
+    <label>Email</label>
+    <input type="email" id="email" required>
+
+    <label>Date of Birth</label>
+    <input type="date" id="dob">
+
+    <label>Contact Number</label>
+    <input type="text" id="contact">
+
+    <label>Education</label>
+    <input type="text" id="education">
+
+    <label>Experience</label>
+    <input type="text" id="experience">
+
+    <label>Skills (comma separated)</label>
+    <input type="text" id="skills">
+
+    <label>City</label>
+    <select id="city">
+      <option>Delhi</option>
+      <option>Mumbai</option>
+      <option>Pune</option>
+      <option>Hydrabad</option>
+      <option>Chh. Sambhajinagar</option>
+    </select>
+
+    <label>Profile Picture</label>
+    <input type="file" id="profilePic" accept="image/*">
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+document.getElementById("profileForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const reader = new FileReader();
+  const file = document.getElementById("profilePic").files[0];
+
+  reader.onload = function () {
+    const profileData = {
+      firstName: firstName.value,
+      lastName: lastName.value,
+      email: email.value,
+      dob: dob.value,
+      contact: contact.value,
+      education: education.value,
+      experience: experience.value,
+      skills: skills.value,
+      city: city.value,
+      image: reader.result
+    };
+
+    localStorage.setItem("profileData", JSON.stringify(profileData));
+    window.location.href = "profile.html";
+  };
+
+  if (file) reader.readAsDataURL(file);
+});
+</script>
+
+</body>
+</html>
