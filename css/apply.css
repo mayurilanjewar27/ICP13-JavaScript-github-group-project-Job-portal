@@ -54,3 +54,23 @@ button:hover {
     margin-top: 10px;
     color: green;
 }
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input, select, textarea {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
