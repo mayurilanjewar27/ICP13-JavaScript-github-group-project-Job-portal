@@ -7,3 +7,15 @@ body {
     margin: 0;
     background: #f4f6f8;
 }
+
+.job-header {
+    background: linear-gradient(125deg, #4f46e5, #0ea5e9);
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.header-content {
+    max-width: 900px;
+    margin: auto;
+}
