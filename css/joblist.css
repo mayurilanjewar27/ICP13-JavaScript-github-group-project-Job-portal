@@ -138,3 +138,10 @@ body {
 .apply-btn:active {
     transform: scale(0.98);
 }
+
+@media (max-width: 600px) {
+    .apply-btn {
+        width: 100%;
+        display: block;
+    }
+}
