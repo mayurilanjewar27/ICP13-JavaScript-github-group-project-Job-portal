@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Network</title>
+
+<link rel="stylesheet" href="../css/my-network.css">
+</head>
+
+<body>
+<!-- -----------Navbar---------- -->
+
+    <nav class="navbar">
+          <div class="navbar-left">
+                <a href="my-netwok.html" class="logo"><img src="../images/logo.jpeg" alt="SkillSphere"></a>
+          </div>
+
+          <div class="navbar-right">
+                <ul>
+                    <li><a href="home.html" class="running-page"><img src="../images/home.png" alt=""><span>Home</span></a></li>
+                    <li><a href="my-netwok.html"><img src="../images/my-networks.png" alt=""><span>My Network</span></a></li>
+                    <li><a href="joblist.html"><img src="../images/Jobs.png" alt=""><span>Jobs</span></a></li>
+                    <li><a href="profile.html"><img src="../images/user.png" alt=""><span>Profile</span></a></li>
+                </ul>
+          </div>
+
+    </nav>
+                <!-------------------- Navbar close---------------->
+<h1>My Network</h1>
+<div class="network-container" id="networkContainer"></div>
+<script>
+    const users = [ 
+        { 
+           id: 1, 
+           name: "Suraj Shende", 
+           title: "Software Developer", 
+           company: "Road To Code", 
+           img: "../images/suraj-sir-profile.jpeg", 
+           status: "connect"
+           }, 
+           { 
+            id: 2, 
+            name: "Pinki Hole",
+            title: "Software Engineer", 
+            company: "road To Code", 
+            img: "../images/pinki-mam-profile.jpeg", 
+            status: "connected" 
+            }, 
+            { 
+            id: 3, 
+            name: "Rohit Sharma", 
+            title: "Software Engineer", 
+            company: "Tech Solutions", 
+            img: "../images/user-home.png", 
+            status: "connect"
+             }, 
+            { 
+             id: 4, 
+             name: "Anjali Mehta", 
+             title: "Product Manager", 
+             company: "Innovatech", 
+             img:"../images/user.png", 
+            status: "connect"
+                 
+        } ];
+   const container = document.getElementById("networkContainer");
+
+     function renderUsers() { 
+        container.innerHTML = ""; 
+        users.forEach(user => { 
+        const card = document.createElement("div");     
+        card.className = "card"; 
+        const extraInfo = `<div><strong>ID:</strong> ${user.id}</div>`; 
+        card.innerHTML = `<div class="card-top"> 
+        <img src="${user.img}" class="profile-pic"> <div>
+        <div class="name">${user.name}</div> 
+        <div class="title">${user.title} at ${user.company}</div> 
+        </div> </div> 
+
+        <button class="${user.status === "connected" ? "connected-btn" : "connect-btn"}" 
+        ${user.status === "connected" ? "disabled" : ""}> 
+        ${user.status === "connected" ? "Connected" : "Connect"}
+        </button> <div class="extra-info">${extraInfo}</div>`; 
+
+        document.addEventListener("click", () => { 
+        document.querySelectorAll(".card").forEach(card => { 
+        card.classList.remove("expanded"); 
+        }); }); 
+        
+        const btn = card.querySelector(".connect-btn"); 
+        if (btn) { btn.addEventListener("click", (e) => { e.stopPropagation(); 
+        user.status = "connected"; renderUsers(); }); } 
+        container.appendChild(card); }); 
+        } 
+    renderUsers();
+</script>
+
+</body>
+</html>
