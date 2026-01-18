@@ -1,4 +1,4 @@
-/* --------- Navbar--------- */
+
 *{
     margin: 0;
     padding: 0;
@@ -64,7 +64,6 @@ a{
     width: 100%;
 }
 
-         /* --------Navbar close------- */
 
 
 body{
@@ -77,7 +76,7 @@ body{
   margin:30px auto;
 }
 
-/* FORM */
+
 .form-box{
   background:#fff;
   padding:25px;
@@ -123,7 +122,7 @@ body{
   
 }
 
-/* PROFILE VIEW */
+
 .profile-card{
   background:#fff;
   border-radius:12px;
@@ -170,7 +169,7 @@ body{
   color:#555;
 }
 
-/* ICON LINES */
+
 .info-line{
   display:flex;
   align-items:center;
@@ -185,7 +184,7 @@ body{
   object-fit:contain;
 }
 
-/* INFO GRID */
+
 .info-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -212,7 +211,7 @@ body{
   display:inline-block;
 }
 
-/* LOGOUT */
+
 .logout-btn{
   background:#dc3545;
   color:white;
@@ -226,9 +225,7 @@ body{
 }
 
 
-/* ----------------------RESPONSIVE----------------------- */
 
-/* Tablet view */
 @media (max-width: 900px){
 
   .container{
@@ -250,7 +247,7 @@ body{
 
 }
 
-/* Mobile view */
+
 @media (max-width: 600px){
 
   .cover{
