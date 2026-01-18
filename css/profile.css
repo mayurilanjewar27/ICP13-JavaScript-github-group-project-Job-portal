@@ -1,0 +1,291 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f0f2f5;
+    color: #5f5f5f;
+}
+a{
+    text-decoration: none;
+    color: #5f5f5f;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 6px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 8px 10px  #0000001a;
+}
+
+.logo img{
+    width: 170px;
+    margin-right: 17px;
+    display: block;
+}
+.navbar-right ul li{
+    display: inline-block;
+    list-style: none;
+}
+.navbar-right ul li a{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    margin: 5px 50px;
+    margin-right: 10px ;
+    padding-right: 5px;
+    position: relative;
+}
+.navbar-right ul li a img{
+    width: 17px;
+    margin-right: 7px;
+}
+
+.navbar-right ul li a::after
+{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #045be6;
+    position: absolute;
+    bottom: -25px;
+    transition: width 0.3s;
+}
+.navbar-right ul li a:hover::after,
+.navbar-right ul li a.running-page::after{
+    width: 100%;
+}
+
+
+
+body{
+  font-family: Arial, sans-serif;
+  background:#f2f4f7;
+}
+
+.container{
+  max-width:900px;
+  margin:30px auto;
+}
+
+
+.form-box{
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+}
+
+.form-box input{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.gender-box{
+  margin: 12px 0;
+}
+
+.gender-options{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.gender-options label{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+}
+
+.submit-btn{
+  background:#0a66c2;
+  color:#fff;
+  border:none;
+  padding:10px;
+  width:20%;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+  display: block;
+  margin: 20px auto;
+  
+}
+
+
+.profile-card{
+  background:#fff;
+  border-radius:12px;
+  overflow:visible;
+}
+
+.cover{
+  height:180px;
+  background:#ddd;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+}
+
+.edit-btn{
+  position:absolute;
+  top:20px;
+  right:20px;
+  background:#fff;
+  border:none;
+  padding:8px 14px;
+  border-radius:6px;
+  color:#0a66c2;
+}
+
+.avatar{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  border:5px solid #fff;
+  margin-top:-70px;
+  margin-left:30px;
+  object-fit:cover;
+  position:relative;
+  z-index:5;
+}
+
+.profile-card h1{
+  margin-left:30px;
+}
+
+.profile-card p{
+  margin-left:30px;
+  color:#555;
+}
+
+
+.info-line{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:10px 30px;
+  font-size:16px;
+}
+
+.icon{
+  width:22px;
+  height:22px;
+  object-fit:contain;
+}
+
+
+.info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  padding:20px 30px;
+}
+
+.info-box{
+  background:#f8f9fa;
+  padding:15px;
+  border-radius:8px;
+}
+
+.info-box h3{
+  margin:5px 0;
+}
+
+.skills span{
+  background:#0a66c2;
+  color:#fff;
+  padding:6px 10px;
+  border-radius:6px;
+  margin:4px;
+  display:inline-block;
+}
+
+
+.logout-btn{
+  background:#dc3545;
+  color:white;
+  border:none;
+  padding:12px 20px;
+  border-radius:8px;
+  margin:20px auto;
+  cursor:pointer;
+  font-size:15px;
+  display:block;
+}
+
+
+
+@media (max-width: 900px){
+
+  .container{
+    padding: 0 15px;
+  }
+
+  .info-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .avatar{
+    margin-left: 20px;
+  }
+
+  .submit-btn{
+    width: 20%;
+  }
+  
+
+}
+
+
+@media (max-width: 600px){
+
+  .cover{
+    height: 140px;
+  }
+
+  .avatar{
+    width: 110px;
+    height: 110px;
+    margin-top: -55px;
+    margin-left: 20px;
+  }
+
+  .profile-card h1,
+  .profile-card p{
+    margin-left: 20px;
+  }
+
+  .info-line{
+    margin: 8px 20px;
+    font-size: 14px;
+  }
+
+  .info-grid{
+    padding: 15px 20px;
+  }
+
+  .submit-btn{
+    width: 30%;
+  }
+
+  .logout-btn{
+    width: 30%;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .form-box{
+    padding: 20px;
+  }
+}

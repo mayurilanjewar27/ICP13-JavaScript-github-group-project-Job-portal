@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SkillSphere Profile</title>
+  <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+
+
+    <nav class="navbar">
+          <div class="navbar-left">
+                <a href="home.html" class="logo"><img src="../images/logo.jpeg" alt="SkillSphere"></a>
+          </div>
+
+          <div class="navbar-right">
+                <ul>
+                    <li><a href="home.html"><img src="../images/home.png" alt=""><span>Home</span></a></li>
+                    <li><a href="my-netwok.html"><img src="../images/my-networks.png" alt=""><span>My Network</span></a></li>
+                    <li><a href="joblist.html"><img src="../images/Jobs.png" alt=""><span>Jobs</span></a></li>
+                    <li><a href="profile.html" class="running-page"><img src="../images/user.png" alt=""><span>Profile</span></a></li>
+                </ul>
+          </div>
+
+    </nav>
+
+
+<div class="container">
+
+  
+  <div id="formSection" class="form-box">
+    <h2>Profile Info Form</h2>
+
+    <input id="firstName" placeholder="First Name">
+    <input id="lastName" placeholder="Last Name">
+    <input id="email" placeholder="Email">
+    <input id="dob" type="date">
+    <input id="contact" placeholder="Contact Number">
+    <input id="education" placeholder="Education">
+    <input id="university" placeholder="University">
+    <input id="experience" placeholder="Experience">
+    <input id="skills" placeholder="Skills (comma separated)">
+    <input id="city" placeholder="City">
+
+    <div class="gender-box">
+    <label>Gender:</label>
+
+    <div class="gender-options">
+       <label>
+         <input type="radio" name="gender" value="Male">
+         Male
+       </label>
+   
+       <label>
+         <input type="radio" name="gender" value="Female">
+         Female
+       </label>
+     </div>
+    </div>
+
+
+    <label>Upload Cover Photo</label>
+    <input type="file" id="coverPic">
+
+    <label>Upload Profile Picture</label>
+    <input type="file" id="profilePic">
+
+    <button class="submit-btn" onclick="saveProfile()">Submit</button>
+    
+    </div>
+
+  
+  <div id="profileSection" class="profile-card" style="display:none">
+
+    <div id="coverView" class="cover">
+      <button class="edit-btn" onclick="editProfile()">Edit Profile</button>
+    </div>
+
+    <img id="viewPic" class="avatar">
+
+    <h1 id="viewName"></h1>
+    <p id="viewEmail"></p>
+
+    <div class="info-line">
+      <img src="../images/location.png" class="icon">
+      <span id="viewCity"></span>
+    </div>
+
+    <div class="info-grid">
+
+      <div class="info-box">
+        <img src="../images/education.png" class="icon">
+        <h3>Education</h3>
+        <p id="viewEducation"></p>
+      </div>
+
+      <div class="info-box">
+        <img src="../images/university.png" class="icon">
+        <h3>University</h3>
+        <p id="viewUniversity"></p>
+      </div>
+
+      <div class="info-box">
+        <img src="../images/Jobs.png" class="icon">
+        <h3>Experience</h3>
+        <p id="viewExperience"></p>
+      </div>
+
+      <div class="info-box">
+        <img src="../images/skills.png" class="icon">
+        <h3>Skills</h3>
+        <div id="viewSkills" class="skills"></div>
+      </div>
+
+    </div>
+
+    <div class="info-line">
+      <img src="../images/contact.png" class="icon">
+      <span id="viewContact"></span>
+    </div>
+
+    <div class="info-line">
+      <img src="../images/dob.png" class="icon">
+      <span id="viewDob"></span>
+    </div>
+
+    <div class="info-line">
+      <img src="../images/gender.png" class="icon">
+      <span id="viewGender"></span>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+  </div>
+
+</div>
+
+<script src="../js/profile.js"></script>
+</body>
+</html>
