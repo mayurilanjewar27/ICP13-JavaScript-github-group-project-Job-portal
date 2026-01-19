@@ -68,6 +68,30 @@ a{
 }
 
 
+ @media (max-width: 616px){
+     
+.navbar-right ul li a span{
+    display: none;
+}   
+.navbar-right ul li a {
+    padding-right: 0;
+    margin: 5px;
+}
+.logo img{
+    width: 150px;
+}
+ }
+
+ @media (max-width: 897px){
+     
+.navbar-right ul li a {
+    padding-right: 0;
+    margin: 5px;
+    font-size: 15px;
+}
+ }
+
+
 .job-header {
     background: linear-gradient(125deg, #4f46e5, #0ea5e9);
     padding: 60px 20px;

@@ -12,12 +12,13 @@
     <nav class="navbar">
           <div class="navbar-left">
                 <a href="home.html" class="logo"><img src="../images/logo.jpeg" alt="SkillSphere"></a>
+                
           </div>
 
           <div class="navbar-right">
                 <ul>
                     <li><a href="home.html" class="running-page"><img src="../images/home.png" alt=""><span>Home</span></a></li>
-                    <li><a href="my-netwok.html"><img src="../images/my-networks.png" alt=""><span>My Network</span></a></li>
+                    <li><a href="my-network.html"><img src="../images/my-networks.png" alt=""><span>My Network</span></a></li>
                     <li><a href="joblist.html"><img src="../images/Jobs.png" alt=""><span>Jobs</span></a></li>
                     <li><a href="profile.html"><img src="../images/user.png" alt=""><span>Profile</span></a></li>
                 </ul>
@@ -30,12 +31,13 @@
      <!-- ---------left-side-content---------- -->
            <div class="ls-content">
                <div class="profile-cover">
-                   <img src="https://marketplace.canva.com/EAEmBit3KfU/1/0/1600w/canva-black-flatlay-photo-motivational-finance-quote-facebook-cover-myVl9DXwcjQ.jpg" alt="" width="100%">
+                   <img id="sidebarCover" src="https://marketplace.canva.com/EAEmBit3KfU/1/0/1600w/canva-black-flatlay-photo-motivational-finance-quote-facebook-cover-myVl9DXwcjQ.jpg" alt="" width="100%">
                    <div class="profile-pic">
-                         <img src="../images/user-home.png" alt="">
-                         <h1>User #xyz</h1>
-                         <h3>.</h3>
-                         <h3>..</h3>
+                         <img id="sidebarPic" src="../images/user-home.png" alt="">
+                         <h1 id="sidebarName">User #xyz</h1>
+                         <h3 id="sidebarEducation">.</h3>
+                         <h3 id="sidebarLocation">..</h3>
+
                    </div>
                 </div>
                 <div class="ls-activity">
@@ -46,7 +48,7 @@
                    </ul>
                 </div>
 
-                <div class="recent-activities">
+                <div class="recent-activities" id="recentActivities">
                   <h3>RECENT</h3>
                   <a href="#"><img src="../images/history.png">Web Development</a>
                   <a href="#"><img src="../images/history.png">RoadToCode</a>
@@ -60,27 +62,30 @@
                   <a href="#"><img src="../images/hashtag.png">Web Development</a>
                   <a href="#"><img src="../images/hashtag.png">Mock Interviews</a>
                 </div>
+
+                <p id="showMoreLink" onclick="toggleActivity()">Show more <b>+</b> </p>
            </div>   
      <!-- ---------middle-content----------  -->
            <div class="middle-content">
 
                 <div class="create-post">
                     <div class="create-post-input">
-                        <img src="../images/user-home.png" alt="">
-                        <textarea rows="2" placeholder="Start a post"></textarea>
+                        <img id="middleProfilePic" src="../images/user-home.png" alt="">
+                        <textarea id="postText" rows="2" placeholder="Start a post"></textarea>
                     </div>
                     <div class="create-post-links">
                         <li><img src="../images/photo.png" alt="">Photo</li>
                         <li><img src="../images/video.png" alt="">Video</li>
                         <li><img src="../images/article.png" alt="">Write article</li>
-                        <li>Post</li>
+                        <li onclick="addPost()">Post</li>
                     </div>
                 </div>
                 <div class="sort-by">
                   <hr>
                   <p>Sort by: <span>top <img src="../images/down-arrow.png" alt=""></span></p>
                 </div>
-
+                
+                <div id="postContainer"></div>
 
                 <div class="post">
                   <div class="post-author">
@@ -220,8 +225,6 @@
                     </div>
                     
                 </div>
-                
-                     <!---------------------post end------------------->
 
                 <div class="post">
                   <div class="post-author">
@@ -286,7 +289,7 @@
                   <h3>Trending News</h3>
                   <a href="https://www.indiatoday.in/education-today/jobs-and-careers/story/25-fastest-growing-jobs-in-india-in-2026-linkedin-report-2848588-2026-01-08" target="_blank">
                   India's 25 fastest-growing jobs</a>
-                  <span>17h ago &middot; 7,056 readers</span>
+                  <span>17h ago &middot; 1,704 readers</span>
                   
                   <a href="https://economictimes.indiatimes.com/nri/work/visa-delays-turn-taxing-for-h-1b-holders-in-india/articleshow/126533212.cms" target="_blank">H-1B visa delays mount</a>
                   <span>23h ago &middot; 8,910 readers</span>
@@ -327,5 +330,6 @@
                 </div>
            </div>   
     </div>         
+    <script src="../js/home.js"></script>
 </body>
 </html>

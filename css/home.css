@@ -65,7 +65,32 @@ a{
     width: 100%;
 }
 
-         /* --------Navbar close------- */
+    /* -------------Navbar responsive---------- */
+    /* Mobile */
+ @media (max-width: 616px){
+     
+.navbar-right ul li a span{
+    display: none;
+}   
+.navbar-right ul li a {
+    padding-right: 0;
+    margin: 5px;
+}
+.logo img{
+    width: 150px;
+}
+ }
+     /* Tablet */
+ @media (max-width: 897px){
+     
+.navbar-right ul li a {
+    padding-right: 0;
+    margin: 5px;
+    font-size: 15px;
+}
+ }
+
+         /* -----------------Navbar close----------------- */
 
  .container{
     padding: 20px 6%;
@@ -365,3 +390,87 @@ a{
     width: 18px;
     margin-right: 5px;
 }
+#showMoreLink{
+    display: none;
+}
+
+/* ------------------Home page responsive------------------ */
+ 
+/* Mobile */
+ @media (max-width: 616px){
+.container{
+    padding: 15px 3%;
+}
+.ls-content , .rs-content{
+    flex-basis: 100%;
+    position: relative;
+    top: unset;
+}
+.middle-content{
+    flex-basis: 100%;
+}
+.post-stats div{
+    margin: 2px 0;
+}
+.post-activity-reaction span{
+    display: none;
+}
+.post-activity-reaction img{
+    margin-right: 0;
+}
+#showMoreLink{
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    font-size: 14px;
+    cursor: pointer;
+}
+.recent-activities{
+    display: none;
+}
+.recent-activities.open-activity{
+    display: block;
+}
+
+  }
+
+  /* Tablet */
+@media (min-width: 617px) and (max-width: 972px){
+.container{
+    padding: 15px 3%;
+}
+.ls-content , .rs-content{
+    flex-basis: 100%;
+    position: relative;
+    top: unset;
+}
+.middle-content{
+    flex-basis: 100%;
+}
+.post-stats div{
+    margin: 2px 0;
+}
+.post-activity{
+     margin-left: 10px;
+}
+.post-activity-reaction span{
+    font-size: 15px;
+}
+.post-activity-reaction img{
+    margin-right: 5px;
+}
+#showMoreLink{
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    font-size: 14px;
+    cursor: pointer;
+}
+.recent-activities{
+    display: none;
+}
+.recent-activities.open-activity{
+    display: block;
+}
+
+ }
