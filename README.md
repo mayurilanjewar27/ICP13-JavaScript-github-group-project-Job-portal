@@ -91,12 +91,17 @@ It allows users to create profiles, post content, react to posts, explore job an
 
 ## 📸 Screenshots
 
-## Login pade
+## Login page
 ![Index page ](./images/readme-index.png)
 ---
 
  ## Home page
 ![Home page ](./images/readme-home.png)
+---
 
+---
+## 📜 Copyright
+
+© 2026 SkillSphere. All rights reserved.
 
 ---
