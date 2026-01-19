@@ -78,3 +78,13 @@ It allows users to create profiles, post content, react to posts, explore job an
 - FileReader API  
 
 ---
+
+## 👥 Team Members
+
+- Team Leader: Hemang Khedikar 
+- Member 2 : Rohan Shedage
+- Member 3 : Abhi Sanap
+- Member 4 : Mayuri
+- Member 5 : vaishnavirashinkar
+
+---
