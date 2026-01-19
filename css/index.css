@@ -1,0 +1,164 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 80px;
+            padding-top: 80px;
+        }
+
+        .left {
+            width: 40%;
+        }
+
+        .logo {
+            font-size: 32px;
+            color: #0a66c2;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 400;
+            color: #8f5849;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .password-box {
+            position: relative;
+        }
+
+        .toggle {
+            position: absolute;
+            right: 15px;
+            top: 22px;
+            color: #0a66c2;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .forgot {
+            color: #0a66c2;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        
+        button {
+            width: 60%;
+            padding: 14px;
+            background-color: #0a66c2;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 30px;
+            
+        }
+
+        button:hover {
+            background-color: #004182;
+        }
+
+        .right img {
+            width: 600px;
+            padding-top: 60px;
+          
+        }
+        .logo {
+            width: 250px;
+            
+        }
+       .logoimg {
+        width: 200px;
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        display: flex;
+        align-items: center;
+        }
+        
+     /* ---------------------------------RESPONSIVE DESIGN------------------------------ */
+
+     /* Tablet view */
+
+     @media (max-width: 900px){
+     
+       .container{
+         flex-direction: column;
+         padding: 40px 30px;
+         text-align: center;
+       }
+     
+       .left{
+         width: 100%;
+       }
+     
+       h1{
+         font-size: 32px;
+       }
+     
+       button{
+         width: 80%;
+       }
+     
+       .right img{
+         width: 400px;
+         padding-top: 40px;
+       }
+     
+       .logoimg{
+         position: static;
+         margin-bottom: 20px;
+       }
+     }
+
+   /* Mobile view */
+   
+   @media (max-width: 600px){
+   
+     .container{
+       padding: 30px 20px;
+     }
+   
+     h1{
+       font-size: 26px;
+     }
+   
+     input{
+       font-size: 14px;
+       padding: 12px;
+     }
+   
+     button{
+       width: 100%;
+       font-size: 18px;
+     }
+   
+     .right img{
+       width: 300px;
+     }
+   
+     .toggle{
+       top: 18px;
+       right: 12px;
+       font-size: 12px;
+     }
+   }   
